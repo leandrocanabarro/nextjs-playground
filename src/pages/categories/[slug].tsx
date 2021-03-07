@@ -2,9 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
 
-import Seo from '@/components/Seo';
+import Seo from '@/components/Seo'
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 interface IProduct {
   id: string
@@ -29,12 +29,8 @@ export default function Category({ products }: CategoryProps) {
       <section>
         <Title>All Products</Title>
         <ul>
-          {products.map(product => {
-            return (
-              <li key={product.id}>
-                {product.title}
-              </li>
-            )
+          {products.map((product) => {
+            return <li key={product.id}>{product.title}</li>
           })}
         </ul>
       </section>
@@ -46,30 +42,30 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`)
   const categories = await response.json()
 
-  const paths = categories.map(category => {
+  const paths = categories.map((category) => {
     return {
       params: {
-        slug: category.id
-      }
+        slug: category.id,
+      },
     }
   })
 
   return {
     paths,
-    fallback: true
+    fallback: true,
   }
 }
 
 export const getStaticProps: GetStaticProps<CategoryProps> = async (context) => {
-  const { slug  } = context.params
+  const { slug } = context.params
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products?category_id=${slug}`)
   const products = await response.json()
 
   return {
     props: {
-      products
+      products,
     },
-    revalidate: 60
+    revalidate: 60,
   }
 }

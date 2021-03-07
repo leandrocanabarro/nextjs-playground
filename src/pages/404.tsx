@@ -1,6 +1,6 @@
 import { Title } from '@/styles/pages/Home'
 
-import Seo from '@/components/Seo';
+import Seo from '@/components/Seo'
 
 export default function NotFound() {
   return (

@@ -8,7 +8,6 @@
     "start": "next start",
     "server": "npx json-server server.json -p 4444 -w",
     "server:delay": "npx json-server server.json -p 4444 -w -d 2000"
-
   },
   "dependencies": {
     "next": "10.0.7",

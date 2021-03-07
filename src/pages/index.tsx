@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
 
-import Seo from '@/components/Seo';
+import Seo from '@/components/Seo'
 
 interface IProduct {
   id: string
@@ -21,12 +21,8 @@ export default function Home({ recommendedProducts }: HomeProps) {
       <section>
         <Title>Products</Title>
         <ul>
-          {recommendedProducts.map(recommendedProduct => {
-            return (
-              <li key={recommendedProduct.id}>
-                {recommendedProduct.title}
-              </li>
-            )
+          {recommendedProducts.map((recommendedProduct) => {
+            return <li key={recommendedProduct.id}>{recommendedProduct.title}</li>
           })}
         </ul>
       </section>
@@ -40,7 +36,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
 
   return {
     props: {
-      recommendedProducts
-    }
+      recommendedProducts,
+    },
   }
 }

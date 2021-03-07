@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
 
-import Seo from '@/components/Seo';
+import Seo from '@/components/Seo'
 
 interface IProduct {
   id: string
@@ -21,12 +21,8 @@ export default function Products({ products }: ProductsProps) {
       <section>
         <Title>All Products</Title>
         <ul>
-          {products.map(product => {
-            return (
-              <li key={product.id}>
-                {product.title}
-              </li>
-            )
+          {products.map((product) => {
+            return <li key={product.id}>{product.title}</li>
           })}
         </ul>
       </section>
@@ -40,8 +36,8 @@ export const getStaticProps: GetStaticProps<ProductsProps> = async (context) => 
 
   return {
     props: {
-      products
+      products,
     },
-    revalidate: 5
+    revalidate: 5,
   }
 }

@@ -5,14 +5,56 @@
     { "id": "mochilas", "title": "Mochilas" }
   ],
   "products": [
-    { "id": 1, "title": "Tênis Nike Revolution 5", "price": 209.99, "category_id": "tenis", "slug": "tenis-nike-revolution-5"},
-    { "id": 2, "title": "Tênis Adidas Runfalcon", "price": 149.99, "category_id": "tenis", "slug": "tenis-adidas-runfalcon"},
-    { "id": 3, "title": "Moletom Under Armour", "price": 199.99, "category_id": "moletons", "slug": "moletom-under-armour"},
-    { "id": 4, "title": "Moletom Stompy Raglan", "price": 99.9, "category_id": "moletons", "slug": "moletom-stompy-raglan"},
-    { "id": 5, "title": "Mochila Red Bull Usher", "price": 135.9, "category_id": "mochilas", "slug": "mochila-red-bull-usher"}
+    {
+      "id": 1,
+      "title": "Tênis Nike Revolution 5",
+      "price": 209.99,
+      "category_id": "tenis",
+      "slug": "tenis-nike-revolution-5"
+    },
+    {
+      "id": 2,
+      "title": "Tênis Adidas Runfalcon",
+      "price": 149.99,
+      "category_id": "tenis",
+      "slug": "tenis-adidas-runfalcon"
+    },
+    {
+      "id": 3,
+      "title": "Moletom Under Armour",
+      "price": 199.99,
+      "category_id": "moletons",
+      "slug": "moletom-under-armour"
+    },
+    {
+      "id": 4,
+      "title": "Moletom Stompy Raglan",
+      "price": 99.9,
+      "category_id": "moletons",
+      "slug": "moletom-stompy-raglan"
+    },
+    {
+      "id": 5,
+      "title": "Mochila Red Bull Usher",
+      "price": 135.9,
+      "category_id": "mochilas",
+      "slug": "mochila-red-bull-usher"
+    }
   ],
   "recommended": [
-    { "id": 1, "title": "Tênis Nike Revolution 5", "price": 209.99, "category_id": "tenis", "slug": "tenis-nike-revolution-5"},
-    { "id": 4, "title": "Moletom Stompy Raglan", "price": 99.9, "category_id": "moletons", "slug": "moletom-stompy-raglan"}
+    {
+      "id": 1,
+      "title": "Tênis Nike Revolution 5",
+      "price": 209.99,
+      "category_id": "tenis",
+      "slug": "tenis-nike-revolution-5"
+    },
+    {
+      "id": 4,
+      "title": "Moletom Stompy Raglan",
+      "price": 99.9,
+      "category_id": "moletons",
+      "slug": "moletom-stompy-raglan"
+    }
   ]
 }

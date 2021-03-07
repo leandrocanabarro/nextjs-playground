@@ -1,32 +1,32 @@
 import Head from 'next/head'
 
 interface SeoProps {
-    title: string
-    description?: string
-    image?: string
-    shouldExcludeTitleSuffix?: boolean
-    shouldIndexPage?: boolean
+  title: string
+  description?: string
+  image?: string
+  shouldExcludeTitleSuffix?: boolean
+  shouldIndexPage?: boolean
 }
 
 export default function Seo({
-    title,
-    description,
-    image,
-    shouldExcludeTitleSuffix = false, 
-    shouldIndexPage = true
+  title,
+  description,
+  image,
+  shouldExcludeTitleSuffix = false,
+  shouldIndexPage = true,
 }: SeoProps) {
   const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '|  Next.js' : null}`
-  const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}`: null
+  const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null
 
   return (
     <Head>
       <title>{pageTitle}</title>
-      
-      {description ? <meta name="description" content={description}/> : null}
-      
-      {image ? <meta name="image" content={pageImage}/> : null}
 
-      {!shouldIndexPage ? <meta name="robots" content="noindex,nofollow"/> : null}
+      {description ? <meta name="description" content={description} /> : null}
+
+      {image ? <meta name="image" content={pageImage} /> : null}
+
+      {!shouldIndexPage ? <meta name="robots" content="noindex,nofollow" /> : null}
 
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
