@@ -2,6 +2,8 @@ import { GetServerSideProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
 
+import Seo from '@/components/Seo';
+
 interface IProduct {
   id: string
   title: string
@@ -14,6 +16,8 @@ interface HomeProps {
 export default function Home({ recommendedProducts }: HomeProps) {
   return (
     <div>
+      <Seo title="Home" />
+
       <section>
         <Title>Products</Title>
         <ul>

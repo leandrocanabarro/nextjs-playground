@@ -1,6 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
+
+import Seo from '@/components/Seo';
+
 import { useRouter } from 'next/router';
 
 interface IProduct {
@@ -21,6 +24,8 @@ export default function Category({ products }: CategoryProps) {
 
   return (
     <div>
+      <Seo title="All Products" />
+
       <section>
         <Title>All Products</Title>
         <ul>

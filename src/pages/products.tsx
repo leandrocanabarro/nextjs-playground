@@ -2,6 +2,8 @@ import { GetStaticProps } from 'next'
 
 import { Title } from '@/styles/pages/Home'
 
+import Seo from '@/components/Seo';
+
 interface IProduct {
   id: string
   title: string
@@ -14,6 +16,8 @@ interface ProductsProps {
 export default function Products({ products }: ProductsProps) {
   return (
     <div>
+      <Seo title="All Products" />
+
       <section>
         <Title>All Products</Title>
         <ul>
